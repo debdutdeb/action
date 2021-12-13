@@ -6,6 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to show payload data
     steps:
+      - name: Show keys
+        uses: debdutdeb/show.payload.action@main
+        with:
+          show-keys: true
       - name: Show base
         uses: debdutdeb/show.payload.action@main
         with:
