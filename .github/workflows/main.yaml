@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: debdutdeb/action@v1.1
+        uses: debdutdeb/action@main
         with:
           who-to-greet: 'Debdut'
       # Use the output from the `hello` step
