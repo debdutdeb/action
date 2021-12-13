@@ -1,13 +1,15 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'PR Author Check'
+description: 'Check if PR author belongs to organization or not'
 inputs:
-  who-to-greet: # id of input
-    description: 'Who to greet'
+  org: # id of input
+    description: 'Organization name'
     required: true
-    default: 'World'
+  token:
+    description: 'GitHub token'
+    required: false
 outputs:
   time: # id of output
     description: 'The time we greeted you'
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'index.js'
