@@ -7,15 +7,15 @@ jobs:
     name: A job to show payload data
     steps:
       - name: Show base
-        uses: debdutdeb/action@main
+        uses: debdutdeb/show.payload.action@main
         with:
           key: base
       - name: Show base repo
-        uses: debdutdeb/action@main
+        uses: debdutdeb/show.payload.action@main
         with:
           key: base.repo
           
       - name: Show repository
-        uses: debdutdeb/action@main
+        uses: debdutdeb/show.payload.action@main
         with:
           key: repository
