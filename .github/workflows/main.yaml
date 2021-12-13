@@ -1,13 +1,21 @@
 on:
-  pull_request:
-    types: [opened]
+  push:
 
 jobs:
-  label_pr:
+  show_payload:
     runs-on: ubuntu-latest
-    name: A job to label community PRs
+    name: A job to show payload data
     steps:
-      - name: Check event payload
+      - name: Show base
         uses: debdutdeb/action@main
         with:
-          org: 'RocketChat'
+          key: base
+      - name: Show base repo
+        uses: debdutdeb/action@main
+        with:
+          key: base.repo
+          
+      - name: Show repository
+        uses: debdutdeb/action@main
+        with:
+          key: repository
