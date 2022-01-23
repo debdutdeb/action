@@ -1,25 +1,14 @@
 on:
   push:
+  release:
+    types:
+      - published
+      - created
 
 jobs:
   show_payload:
     runs-on: ubuntu-latest
     name: A job to show payload data
     steps:
-      - name: Show keys
-        uses: debdutdeb/show.payload.action@main
-        with:
-          show-keys: true
-      - name: Show base
-        uses: debdutdeb/show.payload.action@main
-        with:
-          key: base
-      - name: Show base repo
-        uses: debdutdeb/show.payload.action@main
-        with:
-          key: base.repo
-          
-      - name: Show repository
-        uses: debdutdeb/show.payload.action@main
-        with:
-          key: repository
+      - name: show gittag
+        run: echo $GITHUB_REF $GITHUB_REF_NAME
