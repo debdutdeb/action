@@ -15,4 +15,4 @@ jobs:
         
       - name: test workflow function
         run: |
-          echo "::error::"
+          echo "::notice::hello world"
