@@ -12,3 +12,9 @@ jobs:
     steps:
       - name: show gittag
         run: echo $GITHUB_REF $GITHUB_REF_NAME
+        
+      - name: test workflow function
+        run: |
+          echo "::group::My title"
+          echo "Inside group"
+          echo "::endgroup::"
