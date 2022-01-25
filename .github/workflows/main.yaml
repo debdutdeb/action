@@ -15,6 +15,4 @@ jobs:
         
       - name: test workflow function
         run: |
-          echo "::group::My title"
-          echo "Inside group"
-          echo "::endgroup::"
+          echo ":setFailed::failed"
