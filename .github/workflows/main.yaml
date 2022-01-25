@@ -15,4 +15,4 @@ jobs:
         
       - name: test workflow function
         run: |
-          echo "::setFailed::failed"
+          echo "::error::failed"
