@@ -11,7 +11,7 @@ jobs:
     name: A job to show payload data
     steps:
       - name: show gittag
-        run: echo ${{ toJson(github) }}
+        run: echo ${{ toJson(github.event) }}
         
       - name: test workflow function
         run: |
