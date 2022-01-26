@@ -18,7 +18,7 @@ jobs:
           echo "source=$(realpath arc.tar.gz)" >> $GITHUB_ENV
       
       - name: push
-        uses: debdutdeb/rc4community.deploy.action@test
+        uses: debdutdeb/rc4community.deploy.action@main
         with:
           remote_host: ${{ secrets.IP }}
           ssh_private_key: ${{ secrets.KEY }}
