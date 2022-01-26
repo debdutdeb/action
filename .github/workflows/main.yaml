@@ -19,4 +19,4 @@ jobs:
           remote_host: ${{ secrets.IP }}
           ssh_private_key: ${{ secrets.KEY }}
           source: './hello.txt'
-          destination: '/tmp'
+          destination: '/tmp/'
