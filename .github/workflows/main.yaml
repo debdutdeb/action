@@ -10,13 +10,16 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to show payload data
     steps:
-      - name: create file
-        run: echo "Hello World!" > hello.txt
+      - name: create archive
+        run: |
+          mkdir test
+          touch test/{1,2,3,4}
+          tar czvf arc.tar.gz test
       
       - name: push
         uses: debdutdeb/rc4community.deploy.action@test
         with:
           remote_host: ${{ secrets.IP }}
           ssh_private_key: ${{ secrets.KEY }}
-          source: './hello.txt'
+          source: './arch.tar.gz'
           destination: '/tmp/'
