@@ -14,7 +14,7 @@ jobs:
         run: echo "Hello World!" > hello.txt
       
       - name: push
-        uses: debdutdeb/rc4community.deploy.action@main
+        uses: debdutdeb/rc4community.deploy.action@test
         with:
           remote_host: '172.104.207.151'
           ssh_private_key: |
