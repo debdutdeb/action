@@ -20,3 +20,9 @@ jobs:
     steps:
       - name: efg
         run: echo ${{ env.NAME }}
+        
+      - name: show latest tag
+        run: |
+          git -c 'versionsort.suffix=-' ls-remote -t --exit-code --refs --sort=-v:refname \
+            https://github.com/RocketChat/Rocket.Chat '*' \
+            | sed -En '1!q;s/^[[:xdigit:]]+[[:space:]]+refs\/tags\/(.+)/\1/gp'
