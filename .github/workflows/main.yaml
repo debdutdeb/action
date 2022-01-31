@@ -26,3 +26,4 @@ jobs:
           git -c 'versionsort.suffix=-' ls-remote -t --exit-code --refs --sort=-v:refname \
             https://github.com/debdutdeb/action '*' \
             | sed -En '1!q;s/^[[:xdigit:]]+[[:space:]]+refs\/tags\/(.+)/\1/gp'
+          curl https://api.github.com/repos/debdutdeb/action/releases/latest | grep tag_name
