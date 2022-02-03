@@ -1,8 +1,9 @@
 on:
-  push:
-  release:
-    types:
-      - published
+  pull_request:
+#   push:
+#   release:
+#     types:
+#       - published
 #       - created
 
 jobs:
@@ -11,7 +12,6 @@ jobs:
     name: A job to show payload data
     steps:
       - name: abc
-        run: |
-          echo $GITHUB_REPOSITORY
+        uses: debdutdeb/community.pr@test
           
   
