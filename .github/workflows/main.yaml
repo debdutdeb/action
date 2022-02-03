@@ -12,7 +12,10 @@ jobs:
     name: A job to show payload data
     steps:
       - name: show
-        run: echo ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo ${{ secrets.GITHUB_TOKEN }}
+          echo ${{ secrets.IP }}
+          echo ${{ secrets.KEY }}
       - name: abc
         uses: debdutdeb/community.pr@test
         env: 
