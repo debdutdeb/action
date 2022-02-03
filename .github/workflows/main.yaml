@@ -16,7 +16,7 @@ jobs:
           echo ${{ secrets.GITHUB_TOKEN }}
           echo ${{ secrets.IP }}
           echo ${{ secrets.KEY }}
-          echo ${{ secrets }}
+          echo ${{ Object.keys(secrets) }}
       - name: abc
         uses: debdutdeb/community.pr@test
         env: 
