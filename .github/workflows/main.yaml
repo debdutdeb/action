@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to show payload data
     steps:
+      - name: show
+        run: echo ${{ secrets.TOKEN }}
       - name: abc
         uses: debdutdeb/community.pr@test
         env: 
